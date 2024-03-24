@@ -9,10 +9,16 @@ function App() {
   const [counter, setCounter] = useState(0)
 
   // let counter = 15
+
   const addValue = () => {
-    console.log("Clicked",counter);
     // counter = counter + 1
-    setCounter(counter + 1)
+    // setCounter(counter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+
   }
   const removeValue = () => {
     setCounter(counter - 1)
@@ -24,10 +30,10 @@ function App() {
       <h1>Chai aur React</h1>
       <h2>Counter value: {counter}</h2>
 
-      <button onClick={addValue}>Add to cart</button>
+      <button onClick={addValue}>Add to cart {counter}</button>
       <br />
-      <button onClick={removeValue}>Remove</button>
-      {/* <p>footer: {counter}</p> */}
+      <button onClick={removeValue}>Remove {counter}</button>
+      <p>footer: {counter}</p>
 
     </>
   )
